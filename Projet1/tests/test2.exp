@@ -1,0 +1,6 @@
+read x
+read y
+read z
+function f1(x): (let y = 4 in x * y)
+function f2(x): (let x = x + 1 in z * x + (let y = x in 3))
+print f1(f2(z))

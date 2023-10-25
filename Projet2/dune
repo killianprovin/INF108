@@ -1,0 +1,65 @@
+(include_subdirs unqualified)
+
+(library
+  (name circuit)
+  (modules circuit)
+)
+(library
+  (name logique)
+  (modules logique)
+  (libraries circuit)
+ )
+(test
+  (name test_logique)
+  (modules test_logique)
+  (libraries circuit logique arithmetique alu memory)
+)
+
+(library
+  (name arithmetique)
+  (modules arithmetique)
+  (libraries circuit logique)
+ )
+(test
+  (name test_arithmetique)
+  (modules test_arithmetique)
+  (libraries circuit logique arithmetique alu memory)
+)
+
+
+(library
+  (name alu)
+  (modules alu)
+  (libraries circuit logique arithmetique)
+ )
+(test
+  (name test_alu)
+  (modules test_alu)
+  (libraries circuit logique arithmetique alu memory)
+)
+
+(library
+  (name memory)
+  (modules memory)
+  (libraries circuit logique arithmetique)
+)
+(test
+  (name test_memory)
+  (modules test_memory)
+  (libraries circuit logique arithmetique alu memory)
+)
+
+
+(library
+  (name cpu)
+  (modules cpu)
+  (libraries circuit logique arithmetique alu memory)
+)
+(executable
+  (name run_cpu)
+  (modules run_cpu)
+  (promote (until-clean))
+  (libraries circuit logique arithmetique alu memory cpu)
+)
+
+(env (dev (flags :standard -warn-error -26-33)))

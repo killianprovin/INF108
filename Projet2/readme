@@ -1,0 +1,9 @@
+j'ai realisé :
+    -Logique
+    -arithmetique
+    -alu
+    -memory
+    -une partie de CPU (il me manque opcode 0 et 1)
+        -j'ai fait les Opcode de 2 a 15
+        -pour ceux de 4 a 15 je calcule la valeur, puis je fait des select pour la modification des registres
+        

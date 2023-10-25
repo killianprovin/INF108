@@ -1,0 +1,4 @@
+J'ai réalisé les partie 1 à 7
+Pour la modification de tableau il est capable de gerer tab[i1][i2][i3]...[in] = x
+pour les extensions j'ai realisé : range()
+                    j'ai aussi fait les liste par compréhensions
