@@ -1,5 +1,5 @@
 simple compilateur C/MIPS en Ocaml
-voila mon travail, il supporte tout sauf les extensions :
+il supporte :
     • A single type: int
     • function (taking arguments and returning a value)
     • a program is just a list of function definitions
