@@ -17,7 +17,6 @@
 
 /* D�finitions des priorit�s et associativit�s des tokens */
 
-%right EQ
 %left OR
 %left AND
 %nonassoc EQQ NEQ
