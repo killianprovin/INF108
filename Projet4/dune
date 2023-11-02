@@ -1,0 +1,10 @@
+(ocamllex
+ (modules lexer))
+(menhir
+ (modules parser))
+(executable
+ (name calc)
+ (promote (until-clean))
+ (modules lexer parser ast mips compile calc)
+ (flags ()))
+  
